@@ -1,7 +1,7 @@
 {
-    "name": "cretueusebiu/laravel-vue-spa",
-    "description": "A Laravel-Vue SPA starter project template.",
-    "keywords": ["spa", "laravel", "vue"],
+    "name": "JhumanJ/laravel-vue-tailwind-spa",
+    "description": "A Laravel-Vue-Tailwind SPA starter project template.",
+    "keywords": ["spa", "laravel", "vue", "Tailwind"],
     "license": "MIT",
     "type": "project",
     "require": {

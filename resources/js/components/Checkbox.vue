@@ -1,14 +1,14 @@
 <template>
-  <div class="custom-control custom-checkbox d-flex">
+  <div class="flex items-center">
     <input
       :id="id || name"
       :name="name"
       :checked="internalValue"
       type="checkbox"
-      class="custom-control-input"
+      class="w-5 h-5 rounded border-gray-500"
       @click="handleClick"
     >
-    <label :for="id || name" class="custom-control-label my-auto">
+    <label :for="id || name" class="text-gray-700 ml-2">
       <slot />
     </label>
   </div>

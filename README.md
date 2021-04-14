@@ -1,10 +1,10 @@
-# Laravel-Vue SPA 
+# Laravel-Vue-Tailwind SPA 
 
 <a href="https://github.com/cretueusebiu/laravel-vue-spa/actions"><img src="https://github.com/cretueusebiu/laravel-vue-spa/workflows/tests/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/cretueusebiu/laravel-vue-spa"><img src="https://poser.pugx.org/cretueusebiu/laravel-vue-spa/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/cretueusebiu/laravel-vue-spa"><img src="https://poser.pugx.org/cretueusebiu/laravel-vue-spa/v/stable.svg" alt="Latest Stable Version"></a>
 
-> A Laravel-Vue SPA starter kit.
+> A Laravel-Vue-Tailwind SPA starter kit. Forked from [cretueusebiu/laravel-vue-spa](https://github.com/cretueusebiu/laravel-vue-spa).
 
 <p align="center">
 <img src="https://i.imgur.com/NHFTsGt.png">
@@ -18,11 +18,11 @@
 - Login, register, email verification and password reset
 - Authentication with JWT
 - Socialite integration
-- Bootstrap 4 + Font Awesome 5
+- TailwindCSS v2
 
 ## Installation
 
-- `composer create-project --prefer-dist cretueusebiu/laravel-vue-spa`
+- `composer create-project --prefer-dist JhumanJ/laravel-vue-tailwind-spa`
 - Edit `.env` and set your database connection details
 - (When installed via git clone or download, run `php artisan key:generate` and `php artisan jwt:secret`)
 - `php artisan migrate`
@@ -35,9 +35,6 @@
 ```bash
 # Build and watch
 npm run watch
-
-# Serve with hot reloading (not working)
-npm run hot
 ```
 
 #### Production
