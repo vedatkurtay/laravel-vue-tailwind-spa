@@ -1,60 +1,74 @@
 <template>
-  <div class="row">
-    <div class="col-lg-8 m-auto">
+  <div class="flex mt-6">
+    <div class="w-full md:w-2/3 md:mx-auto md:max-w-md">
       <card v-if="mustVerifyEmail" :title="$t('register')">
-        <div class="alert alert-success" role="alert">
+        <div class="text-green-500">
           {{ $t('verify_email_address') }}
         </div>
       </card>
-      <card v-else :title="$t('register')">
+      <card :title="$t('register')" v-else>
         <form @submit.prevent="register" @keydown="form.onKeydown($event)">
           <!-- Name -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" type="text" name="name">
-              <has-error :form="form" field="name" />
-            </div>
+          <div class="relative mb-6">
+            <label for="name" class="text-gray-700">
+              {{ $t('name') }}
+              <span class="text-red-500 required-dot">*</span>
+            </label>
+            <input type="text" id="name"
+                   v-model="form.name" :class="{ 'ring-red-500 ring-2': form.errors.has('name') }"
+                   class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                   name="email"/>
+            <has-error :form="form" field="name"/>
           </div>
 
           <!-- Email -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
-              <has-error :form="form" field="email" />
-            </div>
+          <div class="relative mb-6">
+            <label for="email" class="text-gray-700">
+              {{ $t('email') }}
+              <span class="text-red-500 required-dot">*</span>
+            </label>
+            <input type="text" id="email"
+                   v-model="form.email" :class="{ 'ring-red-500 ring-2': form.errors.has('email') }"
+                   class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                   name="email"/>
+            <has-error :form="form" field="email"/>
           </div>
 
           <!-- Password -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
-              <has-error :form="form" field="password" />
-            </div>
+          <div class="relative mb-6">
+            <label for="password" class="text-gray-700">
+              {{ $t('password') }}
+              <span class="text-red-500 required-dot">*</span>
+            </label>
+            <input type="password" id="password"
+                   v-model="form.password" :class="{ 'ring-red-500 ring-2': form.errors.has('password') }"
+                   class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                   name="password"/>
+            <has-error :form="form" field="password"/>
           </div>
 
-          <!-- Password Confirmation -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control" type="password" name="password_confirmation">
-              <has-error :form="form" field="password_confirmation" />
-            </div>
+          <!-- Password Confirmation-->
+          <div class="relative mt-8 mb-6">
+            <label for="password_confirmation" class="text-gray-700">
+              {{ $t('confirm_password') }}
+              <span class="text-red-500 required-dot">*</span>
+            </label>
+            <input type="password" id="password_confirmation"
+                   v-model="form.password_confirmation"
+                   :class="{ 'ring-red-500 ring-2': form.errors.has('password_confirmation') }"
+                   class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                   name="password_confirmation"/>
+            <has-error :form="form" field="password_confirmation"/>
           </div>
 
-          <div class="form-group row">
-            <div class="col-md-7 offset-md-3 d-flex">
-              <!-- Submit Button -->
-              <v-button :loading="form.busy">
-                {{ $t('register') }}
-              </v-button>
+          <!-- Submit Button -->
+          <v-button class="w-full" :loading="form.busy">
+            {{ $t('register') }}
+          </v-button>
 
-              <!-- GitHub Register Button -->
-              <login-with-github />
-            </div>
-          </div>
+          <!-- GitHub Register Button -->
+          <login-with-github/>
+
         </form>
       </card>
     </div>

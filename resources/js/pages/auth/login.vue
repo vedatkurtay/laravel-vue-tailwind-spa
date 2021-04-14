@@ -2,12 +2,9 @@
   <div class="flex mt-6">
     <div class="w-full md:w-2/3 md:mx-auto md:max-w-md">
       <card :title="$t('login')">
-        <div class="self-center mb-6 text-xl font-light text-gray-600 sm:text-2xl dark:text-white">
-          Login To Your Account
-        </div>
         <form @submit.prevent="login" @keydown="form.onKeydown($event)">
           <!-- Email -->
-          <div class="relative mt-8 mb-6">
+          <div class="relative mb-6">
             <label for="email" class="text-gray-700">
               {{ $t('email') }}
               <span class="text-red-500 required-dot">*</span>
@@ -34,28 +31,26 @@
 
           <!-- Remember Me -->
           <div class="relative flex items-center mt-8 mb-6">
-              <checkbox v-model="remember" class="w-full md:w-1/2" name="remember">
-                {{ $t('remember_me') }}
-              </checkbox>
+            <checkbox v-model="remember" class="w-full md:w-1/2" name="remember">
+              {{ $t('remember_me') }}
+            </checkbox>
 
             <div class="w-full md:w-1/2 text-right">
-              <router-link :to="{ name: 'password.request' }" class="text-xs font-thin text-gray-500 sm:text-sm hover:text-gray-700">
+              <router-link :to="{ name: 'password.request' }"
+                           class="text-xs font-thin text-gray-500 sm:text-sm hover:text-gray-700">
                 {{ $t('forgot_password') }}
               </router-link>
             </div>
           </div>
 
-          <div class="form-group row">
-            <div class="col-md-7 offset-md-3 d-flex">
-              <!-- Submit Button -->
-              <v-button class="w-full" :loading="form.busy">
-                {{ $t('login') }}
-              </v-button>
+          <!-- Submit Button -->
+          <v-button class="w-full" :loading="form.busy">
+            {{ $t('login') }}
+          </v-button>
 
-              <!-- GitHub Login Button -->
-              <login-with-github/>
-            </div>
-          </div>
+          <!-- GitHub Login Button -->
+          <login-with-github class="w-full mt-4"/>
+
         </form>
       </card>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <button :type="nativeType" :disabled="loading" :class="`py-2 px-4
-    bg-indigo-600 hover:bg-${color}-700 focus:ring-${color}-500 focus:ring-offset-${color}-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg`"
+    bg-${color}-600 hover:bg-${color}-700 focus:ring-${color}-500 focus:ring-offset-${color}-200 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg`"
           class="btn"
   >
 

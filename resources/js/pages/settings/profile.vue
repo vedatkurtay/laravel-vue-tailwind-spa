@@ -1,34 +1,39 @@
 <template>
   <card :title="$t('your_info')">
     <form @submit.prevent="update" @keydown="form.onKeydown($event)">
-      <alert-success :form="form" :message="$t('info_updated')" />
+      <alert-success class="mb-5" :form="form" :message="$t('info_updated')"/>
 
       <!-- Name -->
-      <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
-        <div class="col-md-7">
-          <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" type="text" name="name">
-          <has-error :form="form" field="name" />
-        </div>
+      <div class="relative mb-6">
+        <label for="name" class="text-gray-700">
+          {{ $t('name') }}
+          <span class="text-red-500 required-dot">*</span>
+        </label>
+        <input type="text" id="name"
+               v-model="form.name" :class="{ 'ring-red-500 ring-2': form.errors.has('name') }"
+               class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+               name="email"/>
+        <has-error :form="form" field="name"/>
       </div>
 
       <!-- Email -->
-      <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
-        <div class="col-md-7">
-          <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
-          <has-error :form="form" field="email" />
-        </div>
+      <div class="relative mt-8 mb-6">
+        <label for="email" class="text-gray-700">
+          {{ $t('email') }}
+          <span class="text-red-500 required-dot">*</span>
+        </label>
+        <input type="text" id="email"
+               v-model="form.email" :class="{ 'ring-red-500 ring-2': form.errors.has('email') }"
+               class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+               name="email"/>
+        <has-error :form="form" field="email"/>
       </div>
 
       <!-- Submit Button -->
-      <div class="form-group row">
-        <div class="col-md-9 ml-md-auto">
-          <v-button :loading="form.busy" type="success">
-            {{ $t('update') }}
-          </v-button>
-        </div>
-      </div>
+      <v-button :loading="form.busy" type="success">
+        {{ $t('update') }}
+      </v-button>
+
     </form>
   </card>
 </template>

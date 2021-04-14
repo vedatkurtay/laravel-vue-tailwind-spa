@@ -7,7 +7,7 @@
 > A Laravel-Vue-Tailwind SPA starter kit. Forked from [cretueusebiu/laravel-vue-spa](https://github.com/cretueusebiu/laravel-vue-spa).
 
 <p align="center">
-<img src="https://i.imgur.com/NHFTsGt.png">
+<img src="https://i.ibb.co/XCcPJXR/Capture-d-e-cran-2021-04-14-a-17-52-07.png">
 </p>
 
 ## Features
@@ -66,6 +66,10 @@ vendor/bin/phpunit
 # Run Dusk browser tests
 php artisan dusk
 ```
+
+## Credits
+- [cretueusebiu](https://github.com/cretueusebiu/) for creating the original [Laravel Vue SPA](https://github.com/cretueusebiu/laravel-vue-spa)
+- [Tailwind Kit](https://www.tailwind-kit.com/) for all their Tailwind templates
 
 ## Changelog
 

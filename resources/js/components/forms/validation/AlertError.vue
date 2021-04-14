@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { Alert } from 'vform'
+import Alert from './Alert'
 
 export default {
   name: 'AlertError',

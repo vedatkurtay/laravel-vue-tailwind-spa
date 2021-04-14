@@ -1,45 +1,55 @@
 <template>
-  <div class="row">
-    <div class="col-lg-8 m-auto">
+  <div class="flex mt-6">
+    <div class="w-full md:w-2/3 md:mx-auto md:max-w-md">
       <card :title="$t('reset_password')">
         <form @submit.prevent="reset" @keydown="form.onKeydown($event)">
-          <alert-success :form="form" :message="status" />
+          <alert-success class="mb-4" :form="form" :message="status" />
 
           <!-- Email -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email" readonly>
-              <has-error :form="form" field="email" />
-            </div>
+          <div class="relative mb-6">
+            <label for="email" class="text-gray-700">
+              {{ $t('email') }}
+              <span class="text-red-500 required-dot">*</span>
+            </label>
+            <input type="text" id="email"
+                   v-model="form.email" :class="{ 'ring-red-500 ring-2': form.errors.has('email') }"
+                   class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                   name="email"/>
+            <has-error :form="form" field="email"/>
           </div>
 
           <!-- Password -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
-              <has-error :form="form" field="password" />
-            </div>
+          <div class="relative mb-6">
+            <label for="password" class="text-gray-700">
+              {{ $t('password') }}
+              <span class="text-red-500 required-dot">*</span>
+            </label>
+            <input type="password" id="password"
+                   v-model="form.password" :class="{ 'ring-red-500 ring-2': form.errors.has('password') }"
+                   class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                   name="password"/>
+            <has-error :form="form" field="password"/>
           </div>
 
-          <!-- Password Confirmation -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.password_confirmation" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control" type="password" name="password_confirmation">
-              <has-error :form="form" field="password_confirmation" />
-            </div>
+          <!-- Password Confirmation-->
+          <div class="relative mt-8 mb-6">
+            <label for="password_confirmation" class="text-gray-700">
+              {{ $t('confirm_password') }}
+              <span class="text-red-500 required-dot">*</span>
+            </label>
+            <input type="password" id="password_confirmation"
+                   v-model="form.password_confirmation"
+                   :class="{ 'ring-red-500 ring-2': form.errors.has('password_confirmation') }"
+                   class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                   name="password_confirmation"/>
+            <has-error :form="form" field="password_confirmation"/>
           </div>
 
           <!-- Submit Button -->
-          <div class="form-group row">
-            <div class="col-md-9 ml-md-auto">
-              <v-button :loading="form.busy">
-                {{ $t('reset_password') }}
-              </v-button>
-            </div>
-          </div>
+          <v-button class="w-full" :loading="form.busy">
+            {{ $t('reset_password') }}
+          </v-button>
+
         </form>
       </card>
     </div>
