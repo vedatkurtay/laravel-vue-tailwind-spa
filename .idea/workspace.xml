@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb2d300d-cb6a-4b4d-8a7d-2dbb9319d8aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/common/Card.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/forms/validation/Alert.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/common/Button.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Card.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/Checkbox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/forms/Checkbox.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/LoginWithGithub.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LoginWithGithub.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/common/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/forms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/forms/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/forms/validation/AlertError.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/forms/validation/AlertError.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/forms/validation/AlertSuccess.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/forms/validation/AlertSuccess.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/password/email.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/password/email.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/password/reset.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/password/reset.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/errors/404.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/errors/404.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/password.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/password.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1618309155318</updated>
-      <workItem from="1618309167578" duration="19209000" />
+      <workItem from="1618309167578" duration="19561000" />
     </task>
     <servers />
   </component>
