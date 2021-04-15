@@ -4,30 +4,12 @@
       <alert-success class="mb-5" :form="form" :message="$t('password_updated')" />
 
       <!-- Password -->
-      <div class="relative mb-6">
-        <label for="password" class="text-gray-700">
-          {{ $t('password') }}
-          <span class="text-red-500 required-dot">*</span>
-        </label>
-        <input type="password" id="password"
-               v-model="form.password" :class="{ 'ring-red-500 ring-2': form.errors.has('password') }"
-               class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-               name="password"/>
-        <has-error :form="form" field="password"/>
-      </div>
+      <text-input class="mt-8" native-type="password"
+                  name="password" :form="form" :label="$t('password')" :required="true"/>
 
       <!-- Password Confirmation-->
-      <div class="relative mt-8 mb-6">
-        <label for="password_confirmation" class="text-gray-700">
-          {{ $t('confirm_password') }}
-          <span class="text-red-500 required-dot">*</span>
-        </label>
-        <input type="password" id="password_confirmation"
-               v-model="form.password_confirmation" :class="{ 'ring-red-500 ring-2': form.errors.has('password_confirmation') }"
-               class="rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-               name="password_confirmation"/>
-        <has-error :form="form" field="password_confirmation"/>
-      </div>
+      <text-input class="mt-8" native-type="password"
+                  name="password_confirmation" :form="form" :label="$t('confirm_password')" :required="true"/>
 
       <!-- Submit Button -->
       <v-button :loading="form.busy" type="success">

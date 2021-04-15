@@ -1,7 +1,7 @@
 # Laravel-Vue-Tailwind SPA 
 
-<a href="https://packagist.org/packages/cretueusebiu/laravel-vue-spa"><img src="https://poser.pugx.org/jhumanj/laravel-vue-tailwind-spa/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/cretueusebiu/laravel-vue-spa"><img src="https://poser.pugx.org/jhumanj/laravel-vue-tailwind-spa/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/jhumanj/laravel-vue-tailwind-spa"><img src="https://poser.pugx.org/jhumanj/laravel-vue-tailwind-spa/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/jhumanj/laravel-vue-tailwind-spa"><img src="https://poser.pugx.org/jhumanj/laravel-vue-tailwind-spa/v/stable.svg" alt="Latest Stable Version"></a>
 
 > A Laravel-Vue-Tailwind SPA starter kit. Forked from [cretueusebiu/laravel-vue-spa](https://github.com/cretueusebiu/laravel-vue-spa).
 
