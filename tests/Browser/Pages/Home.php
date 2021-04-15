@@ -34,10 +34,7 @@ class Home extends Page
      */
     public function elements()
     {
-        return [
-            '@dropdown-toggle' => '.navbar-nav.ml-auto .dropdown-toggle',
-            '@dropdown-menu' => '.dropdown-menu.show',
-        ];
+        return [];
     }
 
     /**
@@ -48,8 +45,8 @@ class Home extends Page
      */
     public function clickLogout($browser)
     {
-        $browser->click('@dropdown-toggle')
-            ->waitFor('@dropdown-menu')
+        $browser->click('@nav-dropdown-button')
+            ->waitFor('@nav-dropdown')
             ->waitForText('Logout')
             ->clickLink('Logout')
             ->pause(100);
